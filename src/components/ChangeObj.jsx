@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function ChangeObj(props) {  
+export default function ChangeObj(props) {
   const [index, setIndex] = useState(0)
   let obj = props.objArr[index]
   // const changeProfile = ()=>{
@@ -16,7 +16,15 @@ export default function ChangeObj(props) {
       <h1>이름: {obj.name}</h1>
       <h2>나이: {obj.age}</h2>
       <h2>별명: {obj.nickName}</h2>
-      <button onClick={()=>{index === props.objArr.length - 1 ? setIndex((cur)=> 0) : setIndex((cur)=> cur + 1)}}>프로필 변경하기</button>
+      <button
+        onClick={() => {
+          index === props.objArr.length - 1
+            ? setIndex((cur) => 0)
+            : setIndex((cur) => cur + 1)
+        }}
+      >
+        프로필 변경하기
+      </button>
     </div>
   )
 }
