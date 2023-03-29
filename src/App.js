@@ -1,18 +1,12 @@
 import './App.css';
-import ChangeFocus from './components/ChangeFocus';
-import ExComponent7 from './components/ExComponent7';
-import TestRef from './components/TestRef';
-import RefDomControl from './components/RefDomControl';
-import ExUseRef from './components/ExUseRef';
+import Test from './components/Test';
 
 function App() {
   return (
     <div className="App">
-      {/* <TestRef /> */}
-      {/* <ChangeFocus /> */}
-      {/* <RefDomControl /> */}
-      {/* <ExComponent7 /> */}
-      <ExUseRef />
+      <Test />
+      <Test text1="리액트 공부하기" text2="state 사용법 익히기" />
+      <Test text1="코테 풀기" text2="Lv0" />
     </div>
   );
 }
