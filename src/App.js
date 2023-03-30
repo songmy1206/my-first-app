@@ -1,12 +1,11 @@
+import React from 'react';
 import './App.css';
-import Test from './components/Test';
+import PracticeTimerRender from './components/PracticeTimerRender';
 
 function App() {
   return (
     <div className="App">
-      <Test />
-      <Test text1="리액트 공부하기" text2="state 사용법 익히기" />
-      <Test text1="코테 풀기" text2="Lv0" />
+      <PracticeTimerRender />
     </div>
   );
 }
