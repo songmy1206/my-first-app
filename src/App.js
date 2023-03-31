@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import PracticeTimerRender from './components/PracticeTimerRender';
+import TestStyled from './components/TestStyled';
 
 function App() {
   return (
     <div className="App">
-      <PracticeTimerRender />
+      <TestStyled />
     </div>
   );
 }
