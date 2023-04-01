@@ -1,34 +1,25 @@
 import React from 'react';
-import TestList from './TestList';
+import { useState } from 'react';
 
-export default function Test() {
-  const items = [
-    {
-      item: 'PS5',
-      price: '685,000원',
-    },
-    {
-      item: '에어 프라이어',
-      price: '50,000원',
-    },
-    {
-      item: '사세 치킨윙',
-      price: '11,500원',
-    },
-  ];
+export default function Test({ TestArr }) {
+  const arrLength = TestArr.length;
+  const [state, setState] = useState(0);
+  console.log(state);
+  const changeObj = () => {
+    if (arrLength - 1 > state) {
+      setState((cur) => cur + 1);
+    } else {
+      setState(0);
+    }
+  };
   return (
-    <div>
-      {items.map((el, index) => {
-        return <TestList item={el.item} price={el.price} key={index} />;
-      })}
-      {items.map((el, index) => {
-        return (
-          <div key={index}>
-            <h1>{el.item}</h1>
-            <p>{el.price}</p>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div>
+        <h1>{TestArr[state].name}</h1>
+        <h2>{TestArr[state].age}</h2>
+        <p>{TestArr[state].nickName}</p>
+        <button onClick={changeObj}>바꾸기</button>
+      </div>
+    </>
   );
 }

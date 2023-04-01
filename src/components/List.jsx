@@ -18,9 +18,9 @@ export default function List() {
     <div>
       <h1>오늘 해야할 일</h1>
       <Modal />
-      {/* {dataArr.map((el, index) => (
+      {dataArr.map((el, index) => (
         <ListChild title={el.title} text={el.text} />
-      ))} */}
+      ))}
       {dataArr.map((el, index) => {
         return (
           <div key={index}>
